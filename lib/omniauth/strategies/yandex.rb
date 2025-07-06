@@ -31,7 +31,7 @@ module OmniAuth
       end
 
       def callback_url
-        if options.authorize_options.respond_to? :callback_url
+        if options.authorize_options.has_key? :callback_url
           options.authorize_options.callback_url
         else
           super
